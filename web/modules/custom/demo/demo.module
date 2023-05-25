@@ -1,0 +1,40 @@
+<?php
+
+/**
+ * @file
+ * This file utilizes the presave hook to replace local media URLs to Demo URLs
+ */
+
+/**
+ * Implements hook_ENTITY_TYPE_presave
+ */
+function demo_file_presave(\Drupal\file\FileInterface $file) 
+{
+    // https://api.drupal.org/api/drupal/core%21modules%21file%21src%21FileInterface.php/interface/FileInterface/10
+    $file->setFileUri('https://www.sample.li/boat.jpg'); //@Todo: Gotta finish this the proper way
+    // Potential problem: https://drupal.slack.com/archives/C1BB308HH/p1678725331795619
+}
+
+/**
+ * Implements hook_theme().
+ */
+function demo_theme($existing, $type, $theme, $path) 
+{
+    return [
+        'demo_template' => [
+            'variables' => [
+                'dummy_placeholder' => NULL,
+            ],
+        ],
+        'tab2_template' => [
+            'variables' => [
+                'configs' => NULL,
+            ],
+        ],
+        'tab3_template' => [
+            'variables' => [
+                'log_data' => NULL,
+            ],
+        ],
+    ];
+}

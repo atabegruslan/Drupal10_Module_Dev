@@ -1,0 +1,14 @@
+demo.demo:
+  route_name: demo.demo  
+  base_route: demo.demo
+  title: 'Default Tab'
+
+demo.tab2:
+  route_name: demo.tab2
+  base_route: demo.demo
+  title: 'Tab 2'
+
+demo.tab3:
+  route_name: demo.tab3
+  base_route: demo.demo
+  title: 'Tab 3'

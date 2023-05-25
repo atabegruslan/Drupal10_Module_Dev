@@ -1,0 +1,6 @@
+demo.demo:
+  route_name: demo.demo  
+  title: 'Demo'
+  description: 'Demo'
+  weight: 10
+  parent: system.admin

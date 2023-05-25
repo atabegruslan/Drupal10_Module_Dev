@@ -1,0 +1,39 @@
+demo.admin_settings:
+  path: '/admin/config/demo'
+  defaults:
+    _form: '\Drupal\demo\Form\ModuleConfigurationForm'
+    _title: 'configuration screen'
+  requirements:
+    _permission: 'administer site configuration'
+
+demo.demo: 
+  path: '/demo'
+  defaults: 
+    _controller: '\Drupal\demo\Controller\DemoController::index'
+    _title: 'Main Tab'
+  requirements:
+    _permission: 'access content'
+
+demo.welcome:
+  path: '/demo'
+  defaults: 
+    _controller: '\Drupal\demo\Controller\DemoController::index'
+    _title: 'Main Tab'
+  requirements:
+    _permission: 'access content'
+
+demo.tab2:
+  path: '/tab2'
+  defaults: 
+    _controller: '\Drupal\demo\Controller\DemoController::tab2'
+    _title: 'Tab 2'
+  requirements:
+    _permission: 'access content'
+
+demo.tab3:
+  path: '/tab3'
+  defaults: 
+    _controller: '\Drupal\demo\Controller\DemoController::tab3'
+    _title: 'Tab 3'
+  requirements:
+    _permission: 'access content'
